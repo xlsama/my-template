@@ -81,6 +81,9 @@ importers:
       vite-plugin-vue-devtools:
         specifier: ^7.7.2
         version: 7.7.6(rolldown-vite@6.3.11(@types/node@22.15.19)(esbuild@0.25.4)(jiti@2.4.2)(yaml@2.8.0))(rollup@4.41.0)(vue@3.5.14(typescript@5.8.3))
+      vite-plugin-vue-layouts:
+        specifier: ^0.11.0
+        version: 0.11.0(rolldown-vite@6.3.11(@types/node@22.15.19)(esbuild@0.25.4)(jiti@2.4.2)(yaml@2.8.0))(vue-router@4.5.1(vue@3.5.14(typescript@5.8.3)))(vue@3.5.14(typescript@5.8.3))
       vue-tsc:
         specifier: ^2.2.8
         version: 2.2.10(typescript@5.8.3)
@@ -2706,6 +2709,13 @@ packages:
     resolution: {integrity: sha512-cBk172kZKTdvGpJuzCCLg8lJ909wopwsu3Ve9FsL1XsnLBiRT9U3MePcqrgGHgCX2ZgkqZmAGR8taxw+TV6s7A==}
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.0-0
+
+  vite-plugin-vue-layouts@0.11.0:
+    resolution: {integrity: sha512-uh6NW7lt+aOXujK4eHfiNbeo55K9OTuB7fnv+5RVc4OBn/cZull6ThXdYH03JzKanUfgt6QZ37NbbtJ0og59qw==}
+    peerDependencies:
+      vite: ^4.0.0 || ^5.0.0
+      vue: ^3.2.4
+      vue-router: ^4.0.11
 
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
@@ -5578,6 +5588,16 @@ snapshots:
       kolorist: 1.8.0
       magic-string: 0.30.17
       vite: rolldown-vite@6.3.11(@types/node@22.15.19)(esbuild@0.25.4)(jiti@2.4.2)(yaml@2.8.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  vite-plugin-vue-layouts@0.11.0(rolldown-vite@6.3.11(@types/node@22.15.19)(esbuild@0.25.4)(jiti@2.4.2)(yaml@2.8.0))(vue-router@4.5.1(vue@3.5.14(typescript@5.8.3)))(vue@3.5.14(typescript@5.8.3)):
+    dependencies:
+      debug: 4.4.1
+      fast-glob: 3.3.3
+      vite: rolldown-vite@6.3.11(@types/node@22.15.19)(esbuild@0.25.4)(jiti@2.4.2)(yaml@2.8.0)
+      vue: 3.5.14(typescript@5.8.3)
+      vue-router: 4.5.1(vue@3.5.14(typescript@5.8.3))
     transitivePeerDependencies:
       - supports-color
 

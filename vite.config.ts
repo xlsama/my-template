@@ -7,6 +7,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import Layouts from 'vite-plugin-vue-layouts'
 
 export default defineConfig({
   server: {
@@ -25,6 +26,7 @@ export default defineConfig({
     VueRouter({
       dts: 'src/typed-router.d.ts',
     }),
+    Layouts(),
     AutoImport({
       imports: [
         'vue',
