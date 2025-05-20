@@ -1,0 +1,41 @@
+{
+  "name": "smart-ops",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --build && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.2.0",
+    "dayjs": "^1.11.13",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.1",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-format": "^1.0.1",
+    "nano-staged": "^0.8.0",
+    "simple-git-hooks": "^2.13.0",
+    "typescript": "~5.8.0",
+    "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^2.2.8"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm nano-staged"
+  },
+  "nano-staged": {
+    "*": "eslint --fix"
+  }
+}
