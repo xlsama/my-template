@@ -3,5 +3,6 @@
 </script>
 
 <template>
-  hello
+  <Button>123</Button>
+  <Button icon="pi pi-home" aria-label="Save" />
 </template>

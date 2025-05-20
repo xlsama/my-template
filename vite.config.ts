@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -44,6 +45,7 @@ export default defineConfig({
     }),
     Components({
       dts: 'src/components.d.ts',
+      resolvers: [PrimeVueResolver()],
     }),
   ],
 })

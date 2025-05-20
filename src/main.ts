@@ -1,5 +1,7 @@
 import { PiniaColada } from '@pinia/colada'
+import Aura from '@primeuix/themes/aura'
 import { createPinia } from 'pinia'
+import PrimeVue from 'primevue/config'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -18,5 +20,10 @@ const router = createRouter({
 app.use(router)
 app.use(createPinia())
 app.use(PiniaColada, {})
+app.use(PrimeVue, {
+  theme: {
+    preset: Aura,
+  },
+})
 
 app.mount('#app')
