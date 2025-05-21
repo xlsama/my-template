@@ -34,6 +34,10 @@ export default defineConfig({
         'pinia',
         '@vueuse/core',
         VueRouterAutoImports,
+        {
+          'vue-sonner': ['toast'],
+          '@pinia/colada': ['useQuery'],
+        },
       ],
       dts: 'src/auto-imports.d.ts',
       dirs: [
